@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  
+  <path stroke-width="1.5" stroke="#800000" fill="#C41E3A" d="M16 2 L28 9 L28 23 L16 30 L4 23 L4 9 Z"></path>
+
+  
+  <path opacity="0.08" fill="#fff" d="M16 3.5 L27 9.5 L27 22.5 L16 28.5 L5 22.5 L5 9.5 Z"></path>
+
+  
+  <g fill="#FFE154">
+    <polygon points="16,6 18,12 24,12 19,16 21,22 16,18 11,22 13,16 8,12 14,12"></polygon>
+  </g>
+</svg>

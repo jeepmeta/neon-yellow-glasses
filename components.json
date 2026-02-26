@@ -1,0 +1,34 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "app/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "iconLibrary": "lucide",
+  "rtl": false,
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks",
+    "schedule": "@/components/schedule",
+    "crew": "@/components/crew",
+    "crewdata": "@/lib/crewdata",
+    "badges": "@/components/badges",
+    "badgeregistry": "@/lib/badgeregistry",
+    "admin": "@/app/admin",
+    "pfp": "@/public/crew/pfp",
+    "adminUI": "@/components/admin/UI",
+    "sections": "@/components/sections"
+  },
+  "registries": {
+    "@aceternity": "https://ui.aceternity.com/registry/{name}.json"
+  }
+}

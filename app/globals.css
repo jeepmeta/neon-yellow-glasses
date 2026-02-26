@@ -1,0 +1,204 @@
+/* app/globals.css */
+/* 789 Studios – DAO Yellow Domination – Tailwind v4 – 2026 */
+
+@import "tailwindcss";
+
+:root,
+.dark {
+  --color-background: #000000;
+  --color-foreground: #FFFFFF;
+  --color-primary: #FFE154;
+  --color-primary-foreground: #000000;
+  --color-secondary: #111111;
+  --color-secondary-foreground: #FFFFFF;
+  --color-muted: #1a1a1a;
+  --color-muted-foreground: #a0a0a0;
+  --color-accent: #FFE154;
+  --color-accent-foreground: #000000;
+  --color-destructive: #ef4444;
+  --color-border: #222222;
+  --color-input: #1f1f1f;
+  --color-ring: #FFE154;
+  --color-popover: #0a0a0a;
+  --color-popover-foreground: #FFFFFF;
+  --color-card: #0d0d0d;
+  --color-card-foreground: #FFFFFF;
+
+  --radius: 1rem;
+}
+
+/* ──── Base resets – black hole enforced ──── */
+@layer base {
+  * {
+    border-color: var(--color-border);
+    box-sizing: border-box;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    margin: 0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #__next {
+    background: #000000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Prevent wallet/RK hydration white flash */
+  [data-rk],
+  [data-rk] * {
+    --rk-colors-background: #000000 !important;
+    --rk-colors-foreground: #FFFFFF !important;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: color-mix(in srgb, var(--color-primary) 80%, transparent 20%);
+    text-decoration: underline;
+  }
+}
+
+/* ──── 789 CHAOS ANIMATIONS (as utilities) ──── */
+@layer utilities {
+  @keyframes electric-pulse {
+
+    0%,
+    100% {
+      opacity: 0.92;
+      transform: scale(1);
+      filter: brightness(1);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.06);
+      filter: brightness(1.45);
+    }
+  }
+
+  @keyframes glitch-short {
+    0% {
+      transform: translate(0);
+    }
+
+    20% {
+      transform: translate(-1.5px, 1.5px);
+    }
+
+    40% {
+      transform: translate(1.5px, -1.5px);
+    }
+
+    60% {
+      transform: translate(-0.8px, 0.8px);
+    }
+
+    80% {
+      transform: translate(0.8px, -0.8px);
+    }
+
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes yellow-rush {
+    0% {
+      filter: brightness(1) hue-rotate(0deg);
+    }
+
+    30% {
+      filter: brightness(1.75) hue-rotate(40deg);
+    }
+
+    70% {
+      filter: brightness(2) hue-rotate(-30deg);
+    }
+
+    100% {
+      filter: brightness(1) hue-rotate(0deg);
+    }
+  }
+
+  @keyframes breathe-glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 12px rgba(255, 225, 84, 0.10);
+    }
+
+    50% {
+      box-shadow: 0 0 32px rgba(255, 225, 84, 0.35);
+    }
+  }
+
+  .animate-electric-pulse {
+    animation: electric-pulse 1.7s infinite ease-in-out;
+  }
+
+  .animate-glitch {
+    animation: glitch-short 0.4s linear;
+  }
+
+  .animate-yellow-rush {
+    animation: yellow-rush 1.2s ease-out;
+  }
+
+  .animate-breathe-glow {
+    animation: breathe-glow 6.5s infinite ease-in-out;
+  }
+
+  .glitch-once {
+    animation: glitch-short 0.4s linear;
+  }
+}
+
+@keyframes zippo-open {
+  0%   { background-image: var(--zippo-closed); }
+  20%  { background-image: var(--zippo-frame-1); }
+  40%  { background-image: var(--zippo-frame-2); }
+  60%  { background-image: var(--zippo-frame-3); }
+  80%  { background-image: var(--zippo-frame-4); }
+  100% { background-image: var(--zippo-open); }
+}
+
+@keyframes zippo-close {
+  0%   { background-image: var(--zippo-open); }
+  20%  { background-image: var(--zippo-frame-4); }
+  40%  { background-image: var(--zippo-frame-3); }
+  60%  { background-image: var(--zippo-frame-2); }
+  80%  { background-image: var(--zippo-frame-1); }
+  100% { background-image: var(--zippo-closed); }
+}
+
+.zippo-anim-opening {
+  animation: zippo-open 0.4s steps(5) forwards;
+}
+
+.zippo-anim-closing {
+  animation: zippo-close 0.3s steps(5) forwards;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 6s ease-in-out infinite;
+}
