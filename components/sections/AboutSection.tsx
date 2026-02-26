@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion"; // ← fix the import (was wrong)
 import { Cover } from "@/components/ui/cover";
 
 const container = {
@@ -8,12 +8,12 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      delay: 0.9, // delay container fade
-      delayChildren: 0.9, // match child delay
+      delay: 0.9,
+      delayChildren: 0.9,
       staggerChildren: 0.22,
     },
   },
-};
+} as const; // ← this locks literals → Variants happy
 
 const word = {
   hidden: { opacity: 0, y: 40, scale: 0.9 },
@@ -22,25 +22,25 @@ const word = {
     y: 0,
     scale: 1,
     transition: {
-      type: "spring",
+      type: "spring" as const, // ← explicit literal (extra safety)
       stiffness: 260,
       damping: 18,
       mass: 0.6,
     },
   },
-};
+} as const; // ← same here
 
 export default function AboutSection() {
   return (
     <section
       className="
-      py-6 px-5
-      sm:py-8 sm:px-6
-      md:py-10 md:px-8
-      bg-transparent
-      text-center
-      overflow-hidden
-    "
+        py-6 px-5
+        sm:py-8 sm:px-6
+        md:py-10 md:px-8
+        bg-transparent
+        text-center
+        overflow-hidden
+      "
     >
       <motion.div
         initial="hidden"
@@ -58,15 +58,12 @@ export default function AboutSection() {
           px-2 sm:px-4 md:px-0
         "
       >
-        {/* CARTOONS */}
         <motion.span variants={word}>CARTOONS.</motion.span>
 
-        {/* CHAOS wrapped in Cover */}
         <motion.span variants={word}>
           <Cover>CHAOS.</Cover>
         </motion.span>
 
-        {/* CRYPTO */}
         <motion.span variants={word}>CRYPTO.</motion.span>
       </motion.div>
     </section>

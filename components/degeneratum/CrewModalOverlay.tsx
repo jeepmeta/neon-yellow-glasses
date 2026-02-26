@@ -5,9 +5,10 @@ import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { MouseEvent } from "react";
 import ClientCrewDetail from "@/app/crew/[handle]/ClientCrewDetail";
+import type { UICrewMember } from "@/lib/crew/model";
 
 interface Props {
-  member: never;
+  member: UICrewMember;
 }
 
 export function CrewModalOverlay({ member }: Props) {
@@ -17,7 +18,7 @@ export function CrewModalOverlay({ member }: Props) {
   useEffect(() => {
     scrollYRef.current = window.scrollY;
 
-    document.body.style.overflow = "visible";
+    document.body.style.overflow = "hidden";
     document.body.style.position = "fixed";
     document.body.style.top = `-${scrollYRef.current}px`;
     document.body.style.width = "100%";
@@ -52,9 +53,9 @@ export function CrewModalOverlay({ member }: Props) {
       >
         <button
           onClick={() => router.back()}
-          className="absolute -top-4 right-4 px-4 py-1 bg-black/90 border-2 border-[#FFE154]/50 rounded-full text-[#FFE154] font-black text-xl uppercase tracking-tight hover:bg-[#FFE154]/10 hover:border-[#FFE154]/70 transition-all"
+          className="absolute -top-4 right-4 px-4 py-1 bg-black/90 border-2 border-[#FFE154]/50 rounded-full text-[#FFE154] font-black text-xl uppercase tracking-tight hover:bg-[#FFE154]/10 hover:border-[#FFE154]/70 transition-all shadow-md"
         >
-          ←
+          ← BACK
         </button>
 
         <ClientCrewDetail member={member} isModal={true} />

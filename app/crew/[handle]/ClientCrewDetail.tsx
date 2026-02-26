@@ -172,7 +172,7 @@ export default function ClientCrewDetail({ member, isModal = false }: Props) {
                 <BadgePill
                   key={tag}
                   emoji={meta.emoji || "❓"}
-                  tag={meta.tag || tag}
+                  tag={tag}
                   onHoverStart={() => setHoveredTag(tag)}
                   onHoverEnd={() => setHoveredTag(null)}
                 />
