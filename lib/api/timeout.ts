@@ -19,7 +19,7 @@ export function withTimeout<T>(
 /**
  * Wraps an async function with automatic timeout
  */
-export function createTimeoutFn<T extends any[], R>(
+export function createTimeoutFn<T extends unknown[], R>(
   fn: (...args: T) => Promise<R>,
   timeoutMs: number = 10000,
   timeoutMessage?: string,

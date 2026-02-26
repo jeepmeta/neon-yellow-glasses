@@ -40,6 +40,9 @@ export interface CrewMember {
 export interface UICrewMember extends CrewMember {
   socials: Record<string, string>;
   parsedTags: string[]; // ← clean array for rendering badges/emojis
+  isZippo?: boolean;
+  isBic?: boolean;
+  lighterFrames?: string[];
 }
 
 export function toUICrew(db: CrewMember): UICrewMember {

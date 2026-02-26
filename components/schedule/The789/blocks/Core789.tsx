@@ -100,7 +100,7 @@ export default function Core789Block({ crew }: Props) {
         "max-w-[100vw] -mx-6 xs:-mx-3 sm:-mx-2 md:mx-auto",
         "px-0 xs:px-0 sm:px-1 md:px-6 lg:px-8 xl:px-10",
         "md:max-w-[min(85vw,960px)] lg:max-w-[min(70vw,1100px)] xl:max-w-[min(60vw,1200px)] 2xl:max-w-[min(55vw,1300px)]",
-        "-translate-x-[2.5%] sm:-translate-x-[2.5%] md:-translate-x-[2%] lg:-translate-x-0",
+        "-translate-x-[3%] sm:-translate-x-[2.5%] md:-translate-x-[2%] lg:-translate-x-2%",
         "pb-6 md:pb-8 lg:pb-10",
         "justify-items-center justify-center",
       )}

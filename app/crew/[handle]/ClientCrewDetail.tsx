@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import type { UICrewMember } from "@/lib/crew/model";
@@ -23,15 +23,7 @@ export default function ClientCrewDetail({ member, isModal = false }: Props) {
   const targetTilt = useRef({ x: 0, y: 0 });
   const [tiltEnabled, setTiltEnabled] = useState(false);
 
-  // Shared hover state for one pill at a time
-  const [hoveredTag, setHoveredTag] = useState<string | null>(null);
-
   const socialsEntries = Object.entries(member.socials || {});
-
-  useEffect(() => {
-    console.log("CrewDetail - parsedTags:", member.parsedTags);
-    console.log("CrewDetail - raw tags:", member.tags);
-  }, [member]);
 
   // Tilt lerp
   useEffect(() => {
@@ -104,8 +96,7 @@ export default function ClientCrewDetail({ member, isModal = false }: Props) {
       className={`
         pointer-events-auto
         w-full max-w-[520px]
-        bg-neutral-950 rounded-3xl
-        overflow-visible
+        bg-neutral-950 rounded-3xl overflow-visible
         flex flex-col
         shadow-2xl shadow-black/70 border border-[#FFE154]/20
         relative
@@ -145,8 +136,10 @@ export default function ClientCrewDetail({ member, isModal = false }: Props) {
         </div>
       </div>
 
-      {/* Content container – overflow-visible escape */}
-      <div className="flex-1 p-5 md:p-6 overflow-y-auto scrollbar-hide overflow-visible relative">
+      {/* Content – no scrollbar in modal */}
+      <div
+        className={`flex-1 p-5 md:p-6 ${isModal ? "overflow-hidden" : "overflow-y-auto scrollbar-hide"} overflow-visible relative`}
+      >
         <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-6 line-clamp-[8]">
           {member.bio}
         </p>
@@ -161,8 +154,8 @@ export default function ClientCrewDetail({ member, isModal = false }: Props) {
           </p>
         )}
 
-        {/* Badge belt – horizontal, no wrap */}
-        <div className="flex flex-nowrap gap-3 mb-6 items-center overflow-x-auto pb-2 scrollbar-hide">
+        {/* Badge belt – horizontal, local pills */}
+        <div className="flex flex-nowrap gap-3 mb-6 items-center overflow-visible pb-2 scrollbar-hide">
           {member.parsedTags?.length ? (
             member.parsedTags.map((tag) => {
               const meta = badgeRegistry[tag as keyof typeof badgeRegistry];
@@ -172,9 +165,8 @@ export default function ClientCrewDetail({ member, isModal = false }: Props) {
                 <BadgePill
                   key={tag}
                   emoji={meta.emoji || "❓"}
-                  tag={tag}
-                  onHoverStart={() => setHoveredTag(tag)}
-                  onHoverEnd={() => setHoveredTag(null)}
+                  tag={meta.tag || tag}
+                  svg={meta.svg}
                 />
               );
             })
@@ -184,28 +176,6 @@ export default function ClientCrewDetail({ member, isModal = false }: Props) {
             </span>
           )}
         </div>
-
-        {/* Global pill – renders at card level, escapes all overflow */}
-        <AnimatePresence>
-          {hoveredTag && (
-            <motion.div
-              initial={{ opacity: 0, y: [-20] }}
-              animate={{ opacity: 1, y: [-30] }}
-              exit={{ opacity: 0, y: [-20] }}
-              transition={{ duration: 0.24 }}
-              className="
-                absolute top-[-4rem] left-1/2 -translate-x-1/2 z-[200]
-                bg-black/95 border-2 border-[#FFE154]/60 rounded-full
-                px-6 py-1.5 text-base font-medium text-[#FFE154] whitespace-nowrap
-                shadow-2xl shadow-[#FFE154]/40 pointer-events-none
-              "
-            >
-              {badgeRegistry[hoveredTag as keyof typeof badgeRegistry]?.emoji ||
-                "❓"}{" "}
-              {hoveredTag}
-            </motion.div>
-          )}
-        </AnimatePresence>
 
         {socialsEntries.length > 0 && (
           <div className="mt-6">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { supabaseBrowser } from "@/lib/supabase/realtimeClient";
+import { supabase } from "@/lib/supabase/realtimeClient";
 
 type LiveStatus = {
   id: string;
@@ -15,7 +15,7 @@ export function useCrewLiveStatus(crewId: string) {
     let active = true;
 
     async function init() {
-      const { data, error } = await supabaseBrowser
+      const { data, error } = await supabase
         .from("crew_members")
         .select("status")
         .eq("id", crewId)
@@ -26,7 +26,7 @@ export function useCrewLiveStatus(crewId: string) {
         setIsLive(data.status === "live");
       }
 
-      const channel = supabaseBrowser
+      const channel = supabase
         .channel(`crew_live_${crewId}`)
         .on(
           "postgres_changes",
@@ -37,7 +37,7 @@ export function useCrewLiveStatus(crewId: string) {
             filter: `id=eq.${crewId}`,
           },
           (payload) => {
-            const newStatus = (payload.new as any).status;
+            const newStatus = (payload.new as Record<string, string>).status;
             setIsLive(newStatus === "live");
           },
         )
@@ -45,7 +45,7 @@ export function useCrewLiveStatus(crewId: string) {
 
       return () => {
         active = false;
-        supabaseBrowser.removeChannel(channel);
+        supabase.removeChannel(channel);
       };
     }
 
