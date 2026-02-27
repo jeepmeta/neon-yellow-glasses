@@ -12,12 +12,12 @@ const FALLBACK =
   ' text-anchor="middle" fill="%23FFE154" font-size="18">789</text></svg>'; // yellow-black branded fallback
 
 const DEFAULT_IMAGES = [
-  "/ddVegas/dd1.avif",
-  "/ddVegas/dd2.avif",
-  "/ddVegas/dd3.avif",
-  "/ddVegas/dd4.avif",
-  "/ddVegas/dd5.avif",
-  "/ddVegas/dd6.avif",
+  "/ddVegas/dd1.webp",
+  "/ddVegas/dd2.webp",
+  "/ddVegas/dd3.webp",
+  "/ddVegas/dd4.webp",
+  "/ddVegas/dd5.webp",
+  "/ddVegas/dd6.webp",
 ];
 
 /* 2️⃣ Config ————————————————————————— */

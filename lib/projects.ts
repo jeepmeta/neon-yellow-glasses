@@ -11,7 +11,7 @@ export const hotTakeCards: HotTakeCard[] = [
   {
     tagline: "Doge chain royalty — still eating",
     title: "Doginal Dogs",
-    src: "/images/doginaldogs-CSN/doginaldogs.avif",
+    src: "/images/doginaldogs-CSN/doginaldogs.webp",
     ctaText: "@doginaldogs",
     ctaLink: "https://x.com/doginaldogs",
     content:
@@ -21,7 +21,7 @@ export const hotTakeCards: HotTakeCard[] = [
   {
     tagline: "Non-stop alpha — 24/7 no mercy",
     title: "CSN",
-    src: "/images/doginaldogs-CSN/csn.avif",
+    src: "/images/doginaldogs-CSN/csn.webp",
     ctaText: "@cryptospacesnet",
     ctaLink: "https://x.com/cryptospacesnet",
     content:
@@ -31,7 +31,7 @@ export const hotTakeCards: HotTakeCard[] = [
   {
     tagline: "Yellow fuel — no apologies",
     title: "YellowDAOx",
-    src: "/images/projects/ydao.avif",
+    src: "/images/projects/ydao.webp",
     ctaText: "@YellowDAOx",
     ctaLink: "https://x.com/YellowDAOx",
     content:
@@ -41,7 +41,7 @@ export const hotTakeCards: HotTakeCard[] = [
   {
     tagline: "Cursed lore — no brakes",
     title: "$POX",
-    src: "/images/projects/pox.avif",
+    src: "/images/projects/pox.webp",
     ctaText: "@monkeypoxsol",
     ctaLink: "https://x.com/monkeypoxsol",
     content:
@@ -51,7 +51,7 @@ export const hotTakeCards: HotTakeCard[] = [
   {
     tagline: "XRP maxis flexing fuzzy",
     title: "$FUZZY",
-    src: "/images/projects/fuzzy.avif",
+    src: "/images/projects/fuzzy.webp",
     ctaText: "@fuzzy_xrp",
     ctaLink: "https://x.com/fuzzy_xrp",
     content:
@@ -61,7 +61,7 @@ export const hotTakeCards: HotTakeCard[] = [
   {
     tagline: "Casino that doesn't lie",
     title: "Toshi.bet",
-    src: "/images/projects/toshibet.avif",
+    src: "/images/projects/toshibet.webp",
     ctaText: "@toshibet",
     ctaLink: "https://x.com/toshibet",
     content:
