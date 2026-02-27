@@ -11,7 +11,7 @@ export const hotTakeCards: HotTakeCard[] = [
   {
     tagline: "Doge chain royalty — still eating",
     title: "Doginal Dogs",
-    src: "/images/doginaldogs-CSN/doginaldogs.webp",
+    src: "/images/doginaldogs-csn/doginaldogs.webp",
     ctaText: "@doginaldogs",
     ctaLink: "https://x.com/doginaldogs",
     content:
@@ -21,7 +21,7 @@ export const hotTakeCards: HotTakeCard[] = [
   {
     tagline: "Non-stop alpha — 24/7 no mercy",
     title: "CSN",
-    src: "/images/doginaldogs-CSN/csn.webp",
+    src: "/images/doginaldogs-csn/csn.webp",
     ctaText: "@cryptospacesnet",
     ctaLink: "https://x.com/cryptospacesnet",
     content:
