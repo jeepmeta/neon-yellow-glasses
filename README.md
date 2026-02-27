@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 789 Studios Empire Hub
 
-## Getting Started
+█▓▒░  YELLOW GO BRRRRRRRR  ░▒▓█
 
-First, run the development server:
+neon-yellow-glasses edition  
+built by Doginal Dogs • OnlyGoodEveryday • DOGE code forever
+
+We don't build apps.  
+We build yellow-black empires that print dopamine and stack revenue.
+
+## Brand DNA – break it and I break you
+Primary: #FFE154 (DAO Yellow – blinding)  
+Palette: pure black #000000 + DAO Yellow + white #FFFFFF  
+Accents: glitch, neon glows, yellow pulse, subtle scanlines  
+Tone: rebellious, meme-pilled, crypto-native, family-first savage  
+Language: short • punchy • slang-heavy • zero suits • maximum chaos
+
+## Current Empire Stack (neon-yellow-glasses v0.1.0)
+- Next.js 16 (app router, bleeding edge)  
+- React 19 + motion/react (tilt & pills go brrr)  
+- TypeScript (no magic strings, ever)  
+- Tailwind 4 + custom DAO Yellow glows  
+- Supabase (crew + tags + auth)  
+- Sentry (catch the bugs before they bite)  
+- Lucide + simple-icons (crypto icons)  
+- Zod (validate or die)  
+- tRPC-like patterns incoming
+
+## Priority Ship Order – Q1–Q2 2026 – DO NOT FUCKING REORDER
+1. Schedule grid (Dawn / Core789 / Graveyard) – ship first or perish  
+2. CrewCard + modal (tilt, floating pills, PFP only inside border)  
+3. Hot Takes Arena  
+4. Developer Marketplace (UI packs downloadable)  
+5. Crew War Room (filterable directory)  
+6. Revenue hooks (sponsors, affiliates, premium gates)
+
+## Quick Start – yellow go brrrrr
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone the empire
+git clone https://github.com/jeepmeta/789-hub.git
+cd 789-hub
+
+# Install the stack
+pnpm install    # or npm i / yarn if you're still living in 2023
+
+# Fire it up locally – feel the glow
 pnpm dev
-# or
-bun dev
-```
+# → http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Build for production (Vercel / Netlify / wherever)
+pnpm build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Run the built beast
+pnpm start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+Contributing – Doginal Dogs only
 
-To learn more about Next.js, take a look at the following resources:
+Branch: feat/schedule-dawn or fix/modal-clip
+Commit: short + meme energy
+git commit -m "feat: yellow pulse on hover + DOGE energy"
+PR: video/screenshot if visual, no walls of text
+Ship ugly → meme-ify → polish → revenue
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Monetization Hooks (already baked)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Sponsor slots in schedule blocks
+Affiliate links in hot takes / marketplace
+Premium gated content (crew war room tiers)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+OnlyGoodEveryday.
+Built by Doginal Dogs.
+DOGE code forever.
+Yellow glow intensifies.
+Let’s F'n go 🚀.
+Jeep
+789
